@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+    <Property name="title" type="java.lang.String" value="S.M.A.R.T Hardrive Checker"/>
+    <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+      <Color id="Default Cursor"/>
+    </Property>
+    <Property name="location" type="java.awt.Point" editor="org.netbeans.beaninfo.editors.PointEditor">
+      <Point value="[0, 0]"/>
+    </Property>
+    <Property name="resizable" type="boolean" value="false"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="intermezzo" alignment="1" max="32767" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Component id="SmartValuePanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="SmartOptionalPanel" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <Component id="oCheckBtn" min="-2" pref="145" max="-2" attributes="0"/>
+                          <EmptySpace type="separate" max="-2" attributes="0"/>
+                          <Component id="oResult" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="intermezzo" min="-2" max="-2" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="SmartValuePanel" max="32767" attributes="0"/>
+                  <Component id="SmartOptionalPanel" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="oCheckBtn" pref="51" max="32767" attributes="0"/>
+                  <Component id="oResult" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JLabel" name="intermezzo">
+      <Properties>
+        <Property name="horizontalAlignment" type="int" value="0"/>
+        <Property name="text" type="java.lang.String" value="S.M.A.R.T stand for Self-Monitoring, Analysis and Reporting Technology"/>
+        <Property name="horizontalTextPosition" type="int" value="0"/>
+      </Properties>
+    </Component>
+    <Container class="javax.swing.JPanel" name="SmartValuePanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="S.M.A.R.T Value">
+              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder/>
+              </Border>
+            </TitledBorder>
+          </Border>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Input Value Here"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="label198" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label197" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label188" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label187" linkSize="1" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label5" linkSize="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="iSMART5" linkSize="3" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Component id="iSMART187" linkSize="3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="iSMART188" linkSize="3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="iSMART197" linkSize="3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="iSMART198" linkSize="3" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="44" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART5" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label5" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART187" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label187" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART188" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label188" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART197" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label197" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART198" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label198" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace pref="30" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="label5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="5"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label187">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="187"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label188">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="188"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label197">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="197"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label198">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="198"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART5">
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART187">
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART188">
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART197">
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART198">
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="SmartOptionalPanel">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="Optional Value">
+              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder/>
+              </Border>
+            </TitledBorder>
+          </Border>
+        </Property>
+        <Property name="toolTipText" type="java.lang.String" value="Input Value Here"/>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="label200" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label199" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label190" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label189" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label6" alignment="1" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="iSMART6" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                          <Component id="iSMART189" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="iSMART190" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="iSMART199" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="iSMART200" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART6" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label6" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART189" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label189" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART190" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label190" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART199" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label199" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART200" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label200" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JLabel" name="label6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="5"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label189">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="187"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label190">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="188"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label199">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="197"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="label200">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="198"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART6">
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART189">
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART190">
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART199">
+        </Component>
+        <Component class="javax.swing.JTextField" name="iSMART200">
+        </Component>
+      </SubComponents>
+    </Container>
+    <Component class="javax.swing.JButton" name="oCheckBtn">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Check Status"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="oCheckBtnActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="oResult">
+    </Component>
+  </SubComponents>
+</Form>
