@@ -5,6 +5,8 @@
  */
 package com.wicaku;
 
+import javax.swing.UIManager;
+
 /**
  *
  * @author wicaku
@@ -17,6 +19,22 @@ public class frame extends javax.swing.JFrame {
     public frame() {
         initComponents();
         this.setLocationRelativeTo(null); //center the frame on start
+        this.setLookandFeel();
+
+    }
+
+    public void setLookandFeel() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+        } catch (Exception e) {
+            System.out.println("Error setting native LAF: " + e);
+        }
+
+        /*try {
+        UIManager.setLookAndFeel("com.sun.java.swing.plaf.gtk.GTKLookAndFeel");
+        } catch (Exception e) {
+        System.out.println("Error setting native LAF: " + e);
+        }*/
     }
 
     /**
@@ -41,18 +59,14 @@ public class frame extends javax.swing.JFrame {
         iSMART197 = new javax.swing.JTextField();
         iSMART198 = new javax.swing.JTextField();
         SmartOptionalPanel = new javax.swing.JPanel();
-        label6 = new javax.swing.JLabel();
-        label189 = new javax.swing.JLabel();
-        label190 = new javax.swing.JLabel();
-        label199 = new javax.swing.JLabel();
+        label10 = new javax.swing.JLabel();
         label200 = new javax.swing.JLabel();
-        iSMART6 = new javax.swing.JTextField();
-        iSMART189 = new javax.swing.JTextField();
-        iSMART190 = new javax.swing.JTextField();
-        iSMART199 = new javax.swing.JTextField();
+        label201 = new javax.swing.JLabel();
+        iSMART10 = new javax.swing.JTextField();
         iSMART200 = new javax.swing.JTextField();
-        oCheckBtn = new javax.swing.JButton();
+        iSMART201 = new javax.swing.JTextField();
         oResult = new javax.swing.JLabel();
+        oStatusBtn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("S.M.A.R.T Hardrive Checker");
@@ -64,7 +78,7 @@ public class frame extends javax.swing.JFrame {
         intermezzo.setText("S.M.A.R.T stand for Self-Monitoring, Analysis and Reporting Technology");
         intermezzo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
 
-        SmartValuePanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "S.M.A.R.T Value"));
+        SmartValuePanel.setBorder(javax.swing.BorderFactory.createTitledBorder("S.M.A.R.T Value"));
         SmartValuePanel.setToolTipText("Input Value Here");
 
         label5.setText("5");
@@ -107,7 +121,7 @@ public class frame extends javax.swing.JFrame {
         SmartValuePanelLayout.setVerticalGroup(
             SmartValuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(SmartValuePanelLayout.createSequentialGroup()
-                .addContainerGap()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(SmartValuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(iSMART5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label5))
@@ -126,26 +140,21 @@ public class frame extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SmartValuePanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(iSMART198, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label198))
-                .addContainerGap(30, Short.MAX_VALUE))
+                    .addComponent(label198)))
         );
 
         SmartValuePanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {label187, label188, label197, label198, label5});
 
         SmartValuePanelLayout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {iSMART187, iSMART188, iSMART197, iSMART198, iSMART5});
 
-        SmartOptionalPanel.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createTitledBorder(""), "Optional Value"));
+        SmartOptionalPanel.setBorder(javax.swing.BorderFactory.createTitledBorder("Optional Value"));
         SmartOptionalPanel.setToolTipText("Input Value Here");
 
-        label6.setText("5");
+        label10.setText("10");
 
-        label189.setText("187");
+        label200.setText("200");
 
-        label190.setText("188");
-
-        label199.setText("197");
-
-        label200.setText("198");
+        label201.setText("201");
 
         javax.swing.GroupLayout SmartOptionalPanelLayout = new javax.swing.GroupLayout(SmartOptionalPanel);
         SmartOptionalPanel.setLayout(SmartOptionalPanelLayout);
@@ -154,19 +163,15 @@ public class frame extends javax.swing.JFrame {
             .addGroup(SmartOptionalPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(SmartOptionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(label201)
                     .addComponent(label200)
-                    .addComponent(label199)
-                    .addComponent(label190)
-                    .addComponent(label189)
-                    .addComponent(label6))
+                    .addComponent(label10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SmartOptionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(iSMART6, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(iSMART10, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(SmartOptionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(iSMART189, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(iSMART190, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(iSMART199, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(iSMART200, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(iSMART200, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(iSMART201, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap(38, Short.MAX_VALUE))
         );
         SmartOptionalPanelLayout.setVerticalGroup(
@@ -174,31 +179,23 @@ public class frame extends javax.swing.JFrame {
             .addGroup(SmartOptionalPanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(SmartOptionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(iSMART6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SmartOptionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(iSMART189, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label189))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SmartOptionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(iSMART190, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label190))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(SmartOptionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(iSMART199, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(label199))
+                    .addComponent(iSMART10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label10))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SmartOptionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(iSMART200, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(label200))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(SmartOptionalPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(iSMART201, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(label201))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        oCheckBtn.setText("Check Status");
-        oCheckBtn.addActionListener(new java.awt.event.ActionListener() {
+        oStatusBtn.setText("Check Status");
+        oStatusBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                oCheckBtnActionPerformed(evt);
+                oStatusBtnActionPerformed(evt);
             }
         });
 
@@ -210,16 +207,15 @@ public class frame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(intermezzo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(SmartValuePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(SmartOptionalPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(0, 0, Short.MAX_VALUE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(oCheckBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(18, 18, 18)
-                            .addComponent(oResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(SmartValuePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(SmartOptionalPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(oStatusBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(oResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -231,19 +227,19 @@ public class frame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(SmartValuePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(SmartOptionalPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(oCheckBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
-                    .addComponent(oResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(oResult, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+                    .addComponent(oStatusBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void oCheckBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oCheckBtnActionPerformed
+    private void oStatusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oStatusBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_oCheckBtnActionPerformed
+    }//GEN-LAST:event_oStatusBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -283,28 +279,24 @@ public class frame extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel SmartOptionalPanel;
     private javax.swing.JPanel SmartValuePanel;
+    private javax.swing.JTextField iSMART10;
     private javax.swing.JTextField iSMART187;
     private javax.swing.JTextField iSMART188;
-    private javax.swing.JTextField iSMART189;
-    private javax.swing.JTextField iSMART190;
     private javax.swing.JTextField iSMART197;
     private javax.swing.JTextField iSMART198;
-    private javax.swing.JTextField iSMART199;
     private javax.swing.JTextField iSMART200;
+    private javax.swing.JTextField iSMART201;
     private javax.swing.JTextField iSMART5;
-    private javax.swing.JTextField iSMART6;
     private javax.swing.JLabel intermezzo;
+    private javax.swing.JLabel label10;
     private javax.swing.JLabel label187;
     private javax.swing.JLabel label188;
-    private javax.swing.JLabel label189;
-    private javax.swing.JLabel label190;
     private javax.swing.JLabel label197;
     private javax.swing.JLabel label198;
-    private javax.swing.JLabel label199;
     private javax.swing.JLabel label200;
+    private javax.swing.JLabel label201;
     private javax.swing.JLabel label5;
-    private javax.swing.JLabel label6;
-    private javax.swing.JButton oCheckBtn;
     private javax.swing.JLabel oResult;
+    private javax.swing.JButton oStatusBtn;
     // End of variables declaration//GEN-END:variables
 }

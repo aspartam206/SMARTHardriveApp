@@ -35,18 +35,16 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="intermezzo" alignment="1" max="32767" attributes="0"/>
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <Component id="SmartValuePanel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="SmartOptionalPanel" min="-2" max="-2" attributes="0"/>
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <Component id="oCheckBtn" min="-2" pref="145" max="-2" attributes="0"/>
-                          <EmptySpace type="separate" max="-2" attributes="0"/>
-                          <Component id="oResult" max="32767" attributes="0"/>
-                      </Group>
+                  <Group type="102" attributes="0">
+                      <Component id="SmartValuePanel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Component id="SmartOptionalPanel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <Component id="oStatusBtn" min="-2" pref="151" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Component id="oResult" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -63,10 +61,10 @@
                   <Component id="SmartValuePanel" max="32767" attributes="0"/>
                   <Component id="SmartOptionalPanel" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="oCheckBtn" pref="51" max="32767" attributes="0"/>
-                  <Component id="oResult" max="32767" attributes="0"/>
+                  <Component id="oResult" pref="46" max="32767" attributes="0"/>
+                  <Component id="oStatusBtn" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -85,11 +83,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="S.M.A.R.T Value">
-              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder/>
-              </Border>
-            </TitledBorder>
+            <TitledBorder title="S.M.A.R.T Value"/>
           </Border>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Input Value Here"/>
@@ -124,7 +118,7 @@
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="iSMART5" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="label5" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -149,7 +143,6 @@
                       <Component id="iSMART198" linkSize="4" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="label198" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace pref="30" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -196,11 +189,7 @@
       <Properties>
         <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
           <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-            <TitledBorder title="Optional Value">
-              <Border PropertyName="innerBorder" info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
-                <TitledBorder/>
-              </Border>
-            </TitledBorder>
+            <TitledBorder title="Optional Value"/>
           </Border>
         </Property>
         <Property name="toolTipText" type="java.lang.String" value="Input Value Here"/>
@@ -212,20 +201,16 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="label201" alignment="1" min="-2" max="-2" attributes="0"/>
                       <Component id="label200" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="label199" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="label190" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="label189" alignment="1" min="-2" max="-2" attributes="0"/>
-                      <Component id="label6" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Component id="label10" alignment="1" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="iSMART6" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
+                      <Component id="iSMART10" alignment="1" min="-2" pref="100" max="-2" attributes="0"/>
                       <Group type="103" alignment="1" groupAlignment="0" attributes="0">
-                          <Component id="iSMART189" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="iSMART190" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
-                          <Component id="iSMART199" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                           <Component id="iSMART200" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
+                          <Component id="iSMART201" alignment="0" min="-2" pref="100" max="-2" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace pref="38" max="32767" attributes="0"/>
@@ -237,28 +222,18 @@
               <Group type="102" alignment="0" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="iSMART6" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="label6" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="iSMART189" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="label189" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="iSMART190" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="label190" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="iSMART199" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="label199" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="iSMART10" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label10" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="iSMART200" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="label200" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="iSMART201" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="label201" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
@@ -266,52 +241,38 @@
         </DimensionLayout>
       </Layout>
       <SubComponents>
-        <Component class="javax.swing.JLabel" name="label6">
+        <Component class="javax.swing.JLabel" name="label10">
           <Properties>
-            <Property name="text" type="java.lang.String" value="5"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="label189">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="187"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="label190">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="188"/>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JLabel" name="label199">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="197"/>
+            <Property name="text" type="java.lang.String" value="10"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="label200">
           <Properties>
-            <Property name="text" type="java.lang.String" value="198"/>
+            <Property name="text" type="java.lang.String" value="200"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="iSMART6">
+        <Component class="javax.swing.JLabel" name="label201">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="201"/>
+          </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="iSMART189">
-        </Component>
-        <Component class="javax.swing.JTextField" name="iSMART190">
-        </Component>
-        <Component class="javax.swing.JTextField" name="iSMART199">
+        <Component class="javax.swing.JTextField" name="iSMART10">
         </Component>
         <Component class="javax.swing.JTextField" name="iSMART200">
         </Component>
+        <Component class="javax.swing.JTextField" name="iSMART201">
+        </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JButton" name="oCheckBtn">
+    <Component class="javax.swing.JLabel" name="oResult">
+    </Component>
+    <Component class="javax.swing.JButton" name="oStatusBtn">
       <Properties>
         <Property name="text" type="java.lang.String" value="Check Status"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="oCheckBtnActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="oStatusBtnActionPerformed"/>
       </Events>
-    </Component>
-    <Component class="javax.swing.JLabel" name="oResult">
     </Component>
   </SubComponents>
 </Form>
