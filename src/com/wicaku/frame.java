@@ -20,10 +20,9 @@ public class frame extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null); //center the frame on start
         this.setLookandFeel();
-
     }
 
-    public void setLookandFeel() {
+    void setLookandFeel() {
         try {
             UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
         } catch (Exception e) {
@@ -65,8 +64,9 @@ public class frame extends javax.swing.JFrame {
         iSMART10 = new javax.swing.JTextField();
         iSMART200 = new javax.swing.JTextField();
         iSMART201 = new javax.swing.JTextField();
-        oResult = new javax.swing.JLabel();
         oStatusBtn = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        oResult = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("S.M.A.R.T Hardrive Checker");
@@ -199,6 +199,11 @@ public class frame extends javax.swing.JFrame {
             }
         });
 
+        oResult.setEditable(false);
+        oResult.setColumns(20);
+        oResult.setRows(5);
+        jScrollPane1.setViewportView(oResult);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -206,16 +211,14 @@ public class frame extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(oStatusBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(intermezzo, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(SmartValuePanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(SmartOptionalPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(oStatusBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(oResult, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(jScrollPane1))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -228,9 +231,9 @@ public class frame extends javax.swing.JFrame {
                     .addComponent(SmartValuePanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(SmartOptionalPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(oResult, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
-                    .addComponent(oStatusBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(oStatusBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -239,6 +242,38 @@ public class frame extends javax.swing.JFrame {
 
     private void oStatusBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_oStatusBtnActionPerformed
         // TODO add your handling code here:
+        main app = new main();
+
+        //System.out.println(iSMART5.getText().isEmpty());
+        if (iSMART5.getText().isEmpty()
+                && iSMART10.getText().isEmpty()
+                && iSMART187.getText().isEmpty()
+                && iSMART188.getText().isEmpty()
+                && iSMART197.getText().isEmpty()
+                && iSMART198.getText().isEmpty()
+                && iSMART200.getText().isEmpty()
+                && iSMART201.getText().isEmpty()) {
+            oResult.append(app.mCheckStatus());
+        } else if (iSMART10.getText().isEmpty()
+                && iSMART200.getText().isEmpty()
+                && iSMART201.getText().isEmpty()) {
+            oResult.append(app.mCheckStatus(
+                    Double.valueOf(iSMART5.getText()),
+                    Double.valueOf(iSMART187.getText()),
+                    Double.valueOf(iSMART188.getText()),
+                    Double.valueOf(iSMART197.getText()),
+                    Double.valueOf(iSMART198.getText())));
+        } else {
+            oResult.append(app.mCheckStatus(
+                    Double.valueOf(iSMART5.getText()),
+                    Double.valueOf(iSMART10.getText()),
+                    Double.valueOf(iSMART187.getText()),
+                    Double.valueOf(iSMART188.getText()),
+                    Double.valueOf(iSMART197.getText()),
+                    Double.valueOf(iSMART198.getText()),
+                    Double.valueOf(iSMART200.getText()),
+                    Double.valueOf(iSMART201.getText())));
+        }
     }//GEN-LAST:event_oStatusBtnActionPerformed
 
     /**
@@ -288,6 +323,7 @@ public class frame extends javax.swing.JFrame {
     private javax.swing.JTextField iSMART201;
     private javax.swing.JTextField iSMART5;
     private javax.swing.JLabel intermezzo;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JLabel label10;
     private javax.swing.JLabel label187;
     private javax.swing.JLabel label188;
@@ -296,7 +332,7 @@ public class frame extends javax.swing.JFrame {
     private javax.swing.JLabel label200;
     private javax.swing.JLabel label201;
     private javax.swing.JLabel label5;
-    private javax.swing.JLabel oResult;
+    private javax.swing.JTextArea oResult;
     private javax.swing.JButton oStatusBtn;
     // End of variables declaration//GEN-END:variables
 }
