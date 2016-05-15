@@ -10,10 +10,7 @@ package com.wicaku;
  * @author Kim So Hyun
  */
 public interface statusInterface {
-
-    public String mCheckStatus();
-
-    public String mCheckStatus(Double i5, Double i187, Double i188, Double i197, Double i198);
-
+    
+    public String mCheckConsole();
     public String mCheckStatus(Double i5, Double i10, Double i187, Double i188, Double i197, Double i198, Double i200, Double i201);
 }

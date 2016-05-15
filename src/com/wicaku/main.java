@@ -16,6 +16,8 @@ import libsvm.svm_node;
  */
 public class main implements com.wicaku.statusInterface {
 
+    private String printStatus, printConsole;
+
     int predict(HashMap<Integer, Double> input, String modelFile) {
         int predictedClass = 0;
         try {
@@ -55,9 +57,9 @@ public class main implements com.wicaku.statusInterface {
         }*/
         switch (predictedClass) {
             case 200:
-                return "The Hardisk of the instance is Working.";
+                return "Working";
             case 500:
-                return "The Hardisk of the instance is Failing.";
+                return "Failling";
             default:
                 return "unknown: an error has occured";
         }
@@ -106,64 +108,9 @@ public class main implements com.wicaku.statusInterface {
     }
 
     @Override
-    public String mCheckStatus() {
-        HashMap input = new HashMap();
-        main app = new main();
-        String printOut;
-
-        input.put(1, 1.0); //5
-        input.put(2, 0.0); //10
-        input.put(3, 0.0); //187
-        input.put(4, 0.0); //188
-        input.put(5, 0.0); //197
-        input.put(6, 0.0); //198
-        input.put(7, 0.0); //200
-        input.put(8, 0.0); //201
-
-        printOut = "inputed value : "
-                + input.toString().toUpperCase()
-                + "\n";
-
-        String modelFile = "mClass.model";
-
-        int predictedClass = app.predict(input, modelFile);
-        printOut = printOut + app.translateHD(predictedClass) + "\n";
-
-        return printOut;
-    }
-
-    @Override
-    public String mCheckStatus(Double i5, Double i187, Double i188, Double i197, Double i198) {
-        HashMap input = new HashMap();
-        main app = new main();
-        String printOut;
-
-        input.put(1, i5); //5
-        input.put(2, 0.0); //10
-        input.put(3, i187); //187
-        input.put(4, i188); //188
-        input.put(5, i197); //197
-        input.put(6, i198); //198
-        input.put(7, 0.0); //200
-        input.put(8, 0.0); //201
-
-        printOut = "inputed value : "
-                + input.toString().toUpperCase()
-                + "\n";
-
-        String modelFile = "mClass.model";
-
-        int predictedClass = app.predict(input, modelFile);
-        printOut = printOut + app.translateHD(predictedClass) + "\n";
-
-        return printOut;
-    }
-
-    @Override
     public String mCheckStatus(Double i5, Double i10, Double i187, Double i188, Double i197, Double i198, Double i200, Double i201) {
         HashMap input = new HashMap();
         main app = new main();
-        String printOut;
 
         input.put(1, i5); //5
         input.put(2, i10); //10
@@ -174,15 +121,26 @@ public class main implements com.wicaku.statusInterface {
         input.put(7, i200); //200
         input.put(8, i201); //201
 
-        printOut = "inputed value : "
-                + input.toString().toUpperCase()
-                + "\n";
+        printConsole = "\ninputed value : \n"
+                + i5.toString().toUpperCase() + "\n"
+                + i10.toString().toUpperCase() + "\n"
+                + i187.toString().toUpperCase() + "\n"
+                + i188.toString().toUpperCase() + "\n"
+                + i197.toString().toUpperCase() + "\n"
+                + i198.toString().toUpperCase() + "\n"
+                + i200.toString().toUpperCase() + "\n"
+                + i201.toString().toUpperCase() + "\n";
 
         String modelFile = "mClass.model";
 
         int predictedClass = app.predict(input, modelFile);
-        printOut = printOut + app.translateHD(predictedClass) + "\n";
+        printStatus = app.translateHD(predictedClass);
 
-        return printOut;
+        return printStatus;
+    }
+
+    @Override
+    public String mCheckConsole() {
+        return printConsole;
     }
 }
